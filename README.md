@@ -54,14 +54,26 @@ Jika pengguna memilih menu keluar, nilai kondisi perulangan diubah sehingga peru
 
 ### **2. Tambah Data Produksi**
 
-<img width="333" height="399" alt="image" src="https://github.com/user-attachments/assets/5f38f9ce-58e8-4f41-bf51-ef1f34616139" />
+<img width="357" height="374" alt="image" src="https://github.com/user-attachments/assets/a30aba89-7f9d-451d-afb5-151b579d78cc" />
 
 
 
 ### **3. Tampilkan Data Produksi**
 
+<img width="333" height="399" alt="image" src="https://github.com/user-attachments/assets/20ce4611-5521-404f-b0cf-40668936c311" />
+
+
 ### **4. Update Data Produksi**
+
+<img width="345" height="373" alt="image" src="https://github.com/user-attachments/assets/f8b7e79c-dfa5-4658-a009-6620e722d374" />
+
 
 ### **5. Hapus Data Produksi**
 
+<img width="351" height="258" alt="image" src="https://github.com/user-attachments/assets/4233f9dc-c79e-46f2-b991-655ff9d72c70" />
+
+
 ### **6. Keluar Progam**
+
+<img width="611" height="344" alt="image" src="https://github.com/user-attachments/assets/be1cecdb-13ae-4595-8d4a-8c6663d96454" />
+
