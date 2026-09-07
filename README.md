@@ -46,3 +46,15 @@ Jika pengguna memilih menu keluar, nilai kondisi perulangan diubah sehingga peru
 
 
 ## **Dokumentasi Alur Program**
+
+### **1. Tampilan Menu Utama**
+
+### **2. Tambah Data Produksi**
+
+### **3. Tampilkan Data Produksi**
+
+### **4. Update Data Produksi**
+
+### **5. Hapus Data Produksi**
+
+### **6. Keluar Progam**
