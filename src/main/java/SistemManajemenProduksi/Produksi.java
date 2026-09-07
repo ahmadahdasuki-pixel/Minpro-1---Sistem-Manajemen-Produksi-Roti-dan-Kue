@@ -11,14 +11,14 @@ package SistemManajemenProduksi;
 
 // Atribut Produksi
 public class Produksi {
-    public int idProduksi;
-    public Produk produk;
-    public int jumlahProduksi;
-    public String statusProduksi;
-    public String tanggalProduksi;
+    private int idProduksi;
+    private Produk produk;
+    private int jumlahProduksi;
+    private String statusProduksi;
+    private String tanggalProduksi;
     
 // Constructor
-    public Produksi (int idProduksi, Produk produkBaru, int jumlahProduksi, String namaProduk, String jenisProduk){
+    public Produksi (int idProduksi, Produk produk, int jumlahProduksi, String statusProduksi, String tanggalProduksi ){
 
         this.idProduksi=idProduksi;
         this.produk= produk;

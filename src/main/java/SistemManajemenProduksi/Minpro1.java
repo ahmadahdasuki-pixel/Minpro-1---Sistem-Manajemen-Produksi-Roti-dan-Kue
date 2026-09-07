@@ -51,15 +51,11 @@ public class Minpro1 {
 
                 case 5:
                     berjalan = false;
-                    System.out.println(
-                            "Program selesai. Terima kasih!"
-                    );
+                    System.out.println("Program selesai. Terima kasih!");
                     break;
 
                 default:
-                    System.out.println(
-                            "Pilihan tidak valid!"
-                    );
+                    System.out.println("Pilihan tidak valid!");
             }
         }
 
