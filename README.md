@@ -49,7 +49,14 @@ Jika pengguna memilih menu keluar, nilai kondisi perulangan diubah sehingga peru
 
 ### **1. Tampilan Menu Utama**
 
+<img width="341" height="205" alt="image" src="https://github.com/user-attachments/assets/19468a4b-ac3e-413d-87d6-3b82477c63ba" />
+
+
 ### **2. Tambah Data Produksi**
+
+<img width="333" height="399" alt="image" src="https://github.com/user-attachments/assets/5f38f9ce-58e8-4f41-bf51-ef1f34616139" />
+
+
 
 ### **3. Tampilkan Data Produksi**
 
