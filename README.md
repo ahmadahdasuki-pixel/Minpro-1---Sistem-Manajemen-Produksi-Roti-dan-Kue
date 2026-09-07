@@ -51,29 +51,38 @@ Jika pengguna memilih menu keluar, nilai kondisi perulangan diubah sehingga peru
 
 <img width="341" height="205" alt="image" src="https://github.com/user-attachments/assets/19468a4b-ac3e-413d-87d6-3b82477c63ba" />
 
+Ini adalah tampilan awal atau menu utama dari program saat program barusan saja di jalankan dan dapat di lihat menu utama nya itu ada 5 pilihan yang emang di khsususkan untuk sistem CRUD buat program ini.
 
 ### **2. Tambah Data Produksi**
 
 <img width="357" height="374" alt="image" src="https://github.com/user-attachments/assets/a30aba89-7f9d-451d-afb5-151b579d78cc" />
 
+Pada menu 1 yaitu Tambah Data Produksi. Program kemudian meminta pengguna memasukkan beberapa informasi produksi, yaitu ID Produksi 5, ID Produk 6, Nama Produk Pancake, Jenis Produk Kue, Harga Produk 10000, Jumlah Produksi 75, Tanggal Produksi 17-08-2026, dan Status Produksi Berhasil. Setelah seluruh data dimasukkan, program membuat objek Produk dan Produksi, kemudian menyimpan objek produksi tersebut ke dalam ArrayList menggunakan add(). Pesan ("Data produksi berhasil ditambahkan!") menunjukkan bahwa proses penambahan data telah berhasil dilakukan.
 
 
 ### **3. Tampilkan Data Produksi**
 
 <img width="333" height="399" alt="image" src="https://github.com/user-attachments/assets/20ce4611-5521-404f-b0cf-40668936c311" />
 
+Pada menu 2 yaitu Tampilkan Data Produksi. Program mengambil data produksi yang sebelumnya telah disimpan di dalam ArrayList dan menampilkannya satu per satu. Data yang ditampilkan meliputi ID Produksi, ID Produk, Nama Produk, Jenis Produk, Harga Produk, Jumlah Produksi, Tanggal Produksi, dan Status Produksi. Proses ini menggunakan perulangan for, ArrayList.get(i), serta getter untuk mengambil data dari objek.
+
 
 ### **4. Update Data Produksi**
 
 <img width="345" height="373" alt="image" src="https://github.com/user-attachments/assets/f8b7e79c-dfa5-4658-a009-6620e722d374" />
+
+Pada menu 3 yaitu Update Data Produksi. Program meminta ID Produksi yang ingin diperbarui, yaitu ID 7. Setelah ID ditemukan, program meminta pengguna memasukkan data baru berupa Nama Produk Roti Canai, Jenis Produk Gandum, Harga Produk 8000, Jumlah Produksi 85, Tanggal Produksi 25-09-2026, dan Status Produksi Berhasil. Data tersebut kemudian diperbarui menggunakan setter, seperti setNamaProduk(), setJenisProduk(), setHargaProduk(), setJumlahProduksi(), setTanggalProduksi(), dan setStatusProduksi(). Pesan ("Data produksi berhasil diperbarui!") menunjukkan bahwa proses update berhasil dilakukan.
 
 
 ### **5. Hapus Data Produksi**
 
 <img width="351" height="258" alt="image" src="https://github.com/user-attachments/assets/4233f9dc-c79e-46f2-b991-655ff9d72c70" />
 
+Pada menu 4 yaitu Hapus Data Produksi. Program kemudian meminta pengguna memasukkan ID Produksi yang ingin dihapus, dan pengguna memasukkan ID 7. Setelah itu, program melakukan pencarian ID menggunakan perulangan for untuk memeriksa setiap data yang terdapat di dalam ArrayList. Program menggunakan getter getIdProduksi() untuk membandingkan ID yang dimasukkan dengan ID yang tersimpan. Setelah ID ditemukan, program menggunakan method remove(i) untuk menghapus data produksi dari ArrayList. Setelah proses penghapusan berhasil, program menampilkan pesan “Data produksi berhasil dihapus!”, yang menunjukkan bahwa data produksi dengan ID 7 telah berhasil dihapus dari daftar produksi.
+
 
 ### **6. Keluar Progam**
 
 <img width="611" height="344" alt="image" src="https://github.com/user-attachments/assets/be1cecdb-13ae-4595-8d4a-8c6663d96454" />
 
+Pada Menu 5 yaitu Keluar dari program atau sistem manajemen produksi roti dan kue ini yang berarti program selesai dan tidak akan mengulang kembali lagi ke pilihan utama.
