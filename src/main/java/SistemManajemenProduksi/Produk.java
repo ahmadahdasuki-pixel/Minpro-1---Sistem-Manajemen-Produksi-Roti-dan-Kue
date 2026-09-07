@@ -11,10 +11,10 @@ package SistemManajemenProduksi;
 
 //Atribut Produk
 public class Produk {
-    public int idProduk;
-    public String namaProduk;
-    public String jenisProduk;
-    public double hargaProduk;
+    private int idProduk;
+    private String namaProduk;
+    private String jenisProduk;
+    private double hargaProduk;
     
 // Constructor
     public Produk (int idProduk, String namaProduk, String jenisProduk, double hargaProduk){
@@ -24,13 +24,43 @@ public class Produk {
     this.hargaProduk = hargaProduk;
     }
     
-// Method Buat menampilkan Produk
     
-    public void tampilkanProduk() {
-
-        System.out.println("ID Produk    : " + idProduk);
-        System.out.println("Nama Produk  : " + namaProduk);
-        System.out.println("Jenis Produk : " + jenisProduk);
-        System.out.println("Harga Produk       : Rp" + hargaProduk);
+//Getter 
+    
+    public int getIdProduk(){
+        return idProduk;
+        
     }
+    
+    public String getNamaProduk(){
+        return namaProduk;
+    }
+    
+    public String getJenisProduk(){
+        return jenisProduk;
+    }
+    
+    public double getHargaProduk(){
+        return hargaProduk;
+    }
+    
+//    Setter
+    public void setNamaProduk(String namaProduk){
+        this.namaProduk = namaProduk;
+    }
+    
+    public void setJenisProduk(String jenisProduk){
+        this.jenisProduk = jenisProduk;
+    }
+    
+    public void setHargaProduk(double hargaProduk){
+        if (hargaProduk <0){
+            System.out.println ("Harga Tidak Boleh di Bawah 0 ataupun Negatif");
+        }
+        
+        else{
+            this.hargaProduk = hargaProduk;
+        }
+    }
+
 }

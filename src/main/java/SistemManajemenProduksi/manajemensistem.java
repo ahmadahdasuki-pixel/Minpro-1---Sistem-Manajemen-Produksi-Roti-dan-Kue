@@ -1,100 +1,198 @@
 package SistemManajemenProduksi;
 
 import java.util.ArrayList;
+import java.util.Scanner;
+
 
 public class manajemensistem {
 
 
-    ArrayList<Produksi> daftarProduksi;
+    private ArrayList<Produksi> daftarProduksi;
+    private Scanner scanner;
 
-    public manajemensistem() {
+    public manajemensistem(Scanner scanner) {
 
         daftarProduksi = new ArrayList<>();
+        this.scanner = scanner;
     }
 
 //    Tambah Produksi
-    public void tambahProduksi(Produksi produksi) {
+    public void tambahProduksi() {
 
-        daftarProduksi.add(produksi);
+        System.out.print("ID Produksi: ");
+        int idProduksi = scanner.nextInt();
+        scanner.nextLine();
 
-        System.out.println(
-                "Data produksi berhasil ditambahkan!"
+        System.out.print("ID Produk: ");
+        int idProduk = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.print("Nama Produk: ");
+        String namaProduk = scanner.nextLine();
+
+        System.out.print("Jenis Produk: ");
+        String jenisProduk = scanner.nextLine();
+
+        System.out.print("Harga Produk: ");
+        double hargaProduk = scanner.nextDouble();
+        scanner.nextLine();
+
+        System.out.print("Jumlah Produksi: ");
+        int jumlahProduksi = scanner.nextInt();
+        scanner.nextLine();
+
+        System.out.print("Tanggal Produksi: ");
+        String tanggalProduksi = scanner.nextLine();
+
+        System.out.print("Status Produksi: ");
+        String statusProduksi = scanner.nextLine();
+
+        Produk produkBaru = new Produk(
+                idProduk,
+                namaProduk,
+                jenisProduk,
+                hargaProduk
         );
+
+        Produksi produksiBaru = new Produksi(
+                idProduksi,
+                produkBaru,
+                jumlahProduksi,
+                tanggalProduksi,
+                statusProduksi
+        );
+
+        daftarProduksi.add(produksiBaru);
+
+        System.out.println(">> Data produksi berhasil ditambahkan!");
     }
 
 //Tampilkan Produksi
-    public void tampilkanProduksi() {
+ public void tampilkanProduksi() {
 
         if (daftarProduksi.isEmpty()) {
 
-            System.out.println(
-                    "Belum ada data produksi."
-            );
+            System.out.println(">> Belum ada data produksi.");
 
         } else {
 
-            System.out.println(
-                    "DAFTAR DATA PRODUKSI"
-            );
+            for (int i = 0; i < daftarProduksi.size(); i++) {
 
-            for (Produksi produksi : daftarProduksi) {
+                Produksi p = daftarProduksi.get(i);
 
-                produksi.tampilkanProduksi();
+                System.out.println();
+                System.out.println("===== DATA PRODUKSI =====");
+
+                System.out.println(
+                        "ID Produksi     : "
+                        + p.getIdProduksi()
+                );
+
+                System.out.println(
+                        "ID Produk       : "
+                        + p.getProduk().getIdProduk()
+                );
+
+                System.out.println(
+                        "Nama Produk     : "
+                        + p.getProduk().getNamaProduk()
+                );
+
+                System.out.println(
+                        "Jenis Produk    : "
+                        + p.getProduk().getJenisProduk()
+                );
+
+                System.out.println(
+                        "Harga Produk    : Rp"
+                        + p.getProduk().getHargaProduk()
+                );
+
+                System.out.println(
+                        "Jumlah Produksi : "
+                        + p.getJumlahProduksi()
+                );
+
+                System.out.println(
+                        "Tanggal Produksi: "
+                        + p.getTanggalProduksi()
+                );
+
+                System.out.println(
+                        "Status Produksi : "
+                        + p.getStatusProduksi()
+                );
             }
         }
     }
-
+    
+    
 //    Update Produksi
-    public void ubahProduksi(
-            int idProduksi,
-            String namaBaru,
-            String jenisBaru,
-            int jumlahBaru,
-            String tanggalBaru,
-            String statusBaru) {
+    public void updateProduksi(){
 
-        for (Produksi produksi : daftarProduksi) {
+        System.out.print("Masukkan ID Produksi: ");
+        int idTarget = scanner.nextInt();
+        scanner.nextLine();
 
-            if (produksi.idProduksi == idProduksi) {
+        for (Produksi p : daftarProduksi) {
 
-                produksi.namaProduk = namaBaru;
-                produksi.jenisProduk = jenisBaru;
-                produksi.jumlahProduksi = jumlahBaru;
-                produksi.tanggalProduksi = tanggalBaru;
-                produksi.statusProduksi = statusBaru;
+            if (p.getIdProduksi() == idTarget) {
+                System.out.print("Nama Produk Baru: ");
+                String namaBaru = scanner.nextLine();
+
+                System.out.print("Jenis Produk Baru: ");
+                String jenisBaru = scanner.nextLine();
+
+                System.out.print("Harga Produk Baru: ");
+                double hargaBaru = scanner.nextDouble();
+                scanner.nextLine();
+
+                System.out.print("Jumlah Produksi Baru: ");
+                int jumlahBaru = scanner.nextInt();
+                scanner.nextLine();
+
+                System.out.print("Tanggal Produksi Baru: ");
+                String tanggalBaru = scanner.nextLine();
+
+                System.out.print("Status Produksi Baru: ");
+                String statusBaru = scanner.nextLine();
+
+                p.getProduk().setNamaProduk(namaBaru);
+                p.getProduk().setJenisProduk(jenisBaru);
+                p.getProduk().setHargaProduk(hargaBaru);
+
+                p.setJumlahProduksi(jumlahBaru);
+                p.setTanggalProduksi(tanggalBaru);
+                p.setStatusProduksi(statusBaru);
 
                 System.out.println(
-                        "Data berhasil diubah!"
+                        ">> Data produksi berhasil diperbarui!"
                 );
 
                 return;
             }
         }
-
-        System.out.println(
-                "Data tidak ditemukan!"
-        );
     }
+
 //    Hapus Produksi
-    public void hapusProduksi(int idProduksi) {
+    public void hapusProduksi(){
 
-    for (Produksi produksi : daftarProduksi) {
+        System.out.print("Masukkan ID Produksi: ");
+        int idTarget = scanner.nextInt();
 
-        if (produksi.idProduksi == idProduksi) {
-
-            daftarProduksi.remove(produksi);
-
-            System.out.println(
-                    "Data berhasil dihapus!"
-            );
-
-            return;
+        for (int i = 0; i < daftarProduksi.size(); i++) {
+            if (daftarProduksi.get(i).getIdProduksi() == idTarget) {
+                daftarProduksi.remove(i);
+                System.out.println("Data produksi berhasil dihapus!");
+                return;
+            }
         }
-    }
 
-    System.out.println(
-            "Data tidak ditemukan!"
-    );
-   }
-}   
+    System.out.println("Data produksi tidak ditemukan!");
+    
+    }
+    
+}
+    
+    
 
